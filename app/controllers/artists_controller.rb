@@ -14,7 +14,7 @@ class ArtistsController < ApplicationController
   def create
     @artist = Artist.create(artist_params)
     if @artist.save
-      redirect_to @artist
+      redirect_to root_path
     else 
       render :new
     end 
@@ -29,8 +29,9 @@ class ArtistsController < ApplicationController
   end 
 
   def destroy
+    # @artist.songs.destroy
     @artist.destroy
-    redirect_to artists_index_path
+    redirect_to artists_path
   end 
 
   private
@@ -41,4 +42,5 @@ class ArtistsController < ApplicationController
 
   def artist_params
     params.require(:artist).permit(:first_name, :last_name, :hometown, :genre)
+  end 
 end

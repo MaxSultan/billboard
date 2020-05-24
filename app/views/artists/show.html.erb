@@ -1,2 +1,7 @@
-<h1>Artists#show</h1>
-<p>Find me in app/views/artists/show.html.erb</p>
+<h1><%= @artist.full_name %></h1>
+
+<% @songs.each do |song|%>
+<%= song.name %> <%= song.time %>
+<hr/>
+<% end %>
+

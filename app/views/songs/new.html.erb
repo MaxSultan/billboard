@@ -1,2 +1,20 @@
-<h1>Songs#new</h1>
-<p>Find me in app/views/songs/new.html.erb</p>
+<div class="center">
+    <div class="container">
+        <div class="container">
+        <h1>New Song</h1>
+
+        <%= form_for [@artist, @song] do |f| %>
+            <div class="form-feild">
+                <%= f.label :name %>
+                <%= f.text_field :name %>
+            </div>
+            <div class='feild'>
+                <%= f.label :time %>
+                <%= f.text_field :time %>
+            </div>
+                <%= f.submit 'Create New Song', class:'btn-large' %>
+        <% end %>
+        </div>
+    </div>
+</div>
+  <%# , artist_songs_path([@artist, @song]) %>

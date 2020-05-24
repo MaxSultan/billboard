@@ -1,2 +1,28 @@
-<h1>Artists#new</h1>
-<p>Find me in app/views/artists/new.html.erb</p>
+<h1 class="title center">Create a new artist</h1>
+
+<%= form_for @artist do |f| %>
+<div class='container'>
+    <div class="field">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+    </div>
+
+    <div class="field">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+    </div>
+
+    <div class="field">
+    <%= f.label :genre %>
+    <%= f.text_field :genre  %>
+    </div>
+
+    <div class="field">
+    <%= f.label :hometown %>
+    <%= f.text_field :hometown %>
+    </div>
+    <div class="center">
+  <%= f.submit %>
+  </div>
+<% end %>
+

@@ -1,2 +1,13 @@
-<h1>Artists#index</h1>
-<p>Find me in app/views/artists/index.html.erb</p>
+<div class="container">
+<h1 class ="center">Artist List</h1>
+
+<div class="container">
+<% @artists.each do |artist| %>
+        <div style="display:flex;  justify-content:space-between">
+        <p><%= link_to artist.full_name, artist_songs_path(artist) %></p> <p><%= artist.genre %></p> <p><%= artist.hometown %></p>
+        </div>
+        <hr/>
+<% end %>
+
+<div class="center"> <%= link_to 'create new artist', new_artist_path, class:'btn-large' %> </div>
+</div>

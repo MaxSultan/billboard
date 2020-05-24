@@ -1,3 +1,13 @@
 <h1> <%= @list.name %></h1>
 
+<% @songs.each do |song|%>
+<ul>
+    <li>
+        <%= song.name %> 
+    </li>
+</ul>
+<% end %>
+
+<%= link_to 'Add New Song', new_list_song_path %>
+
 <%= link_to 'Back to Playlist', root_path %>

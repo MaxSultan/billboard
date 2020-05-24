@@ -9,6 +9,14 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <nav class="nav-wrapper grey">
+    <ul class="center">
+    <li class="nav-item"><%= link_to 'Playlists', lists_path%></li>
+    <li class="nav-item"><%= link_to 'Artists', artists_path%>></li>
+    <li class="nav-item"><a>All Songs</a></li>
+    </ul>
+  </nav>
+
   <body>
     <%= yield %>
   </body>

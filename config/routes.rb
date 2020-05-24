@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   # get 'songs/edit'
   # get 'songs/show'
 
-  root 'lists#index'
+  root 'artists#index'
 
   resources :lists do
     resources :songs
